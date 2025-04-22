@@ -255,11 +255,10 @@ if ( ( ! empty( $_POST['Submit'] ) ) && ( check_admin_referer( 'youtube-embed-pr
 	$options['style']          = sanitize_text_field( $_POST['youtube_embed_style'] );
 	$options['controls']       = sanitize_text_field( $_POST['youtube_embed_controls'] );
 	$options['color']          = sanitize_text_field( $_POST['youtube_embed_color'] );
-	$options['download_style'] = sanitize_text_field( $_POST['youtube_embed_download_style'] );
+	$options['download_style'] = '';
 	$options['cc_lang']        = sanitize_text_field( $_POST['youtube_embed_cc_lang'] );
 	$options['language']       = sanitize_text_field( $_POST['youtube_embed_language'] );
-	$options['download_text']  = str_replace( '\"', '"', str_replace( "\'", "'", $_POST['youtube_embed_download_text'] ) );
-
+	$options['download_text']  = '';
 	if ( isset( $_POST['youtube_embed_playsinline'] ) ) {
 		$options['playsinline'] = sanitize_text_field( $_POST['youtube_embed_playsinline'] );
 	} else {
@@ -316,11 +315,7 @@ if ( ( ! empty( $_POST['Submit'] ) ) && ( check_admin_referer( 'youtube-embed-pr
 	} else {
 		$options['fixed'] = '';
 	}
-	if ( isset( $_POST['youtube_embed_download'] ) ) {
-		$options['download'] = sanitize_text_field( $_POST['youtube_embed_download'] );
-	} else {
-		$options['download'] = '';
-	}
+	$options['download'] = '';
 
 	$default_size = $_POST['youtube_embed_size'];
 
@@ -380,7 +375,7 @@ while ( $loop <= $general['profile_no'] ) {
 
 <div class="wrap">
 
-<h1><?php _e( 'YouTube Embed Profiles', 'youtube-embed' ); ?><span class="title-count"><?php echo $max_profiles; ?></span></h1>
+<h1><?php _e( 'Embeds for YouTube Profiles', 'youtube-embed' ); ?><span class="title-count"><?php echo $max_profiles; ?></span></h1>
 
 <div class="notice notice-info"><p style="font-weight: bold">NOTE: This plugin supports the ability to insert the standard YouTube embed and playlist players. However, if you need to embed a YouTube facade, livestream, or gallery, we recommend the <a href="https://www.embedplus.com/">EmbedPlus.com</a> plugin that's freely available <a href="https://wordpress.org/plugins/youtube-embed-plus/">here</a>. It's been around for many years and is highly trusted.</p></div>
 
@@ -779,21 +774,25 @@ if ( 'white' == $options['color'] ) {
 <p class="description"><?php _e( 'The color that will be used in the player\'s video progress bar to highlight the amount of the video that\'s already been seen.', 'youtube-embed' ); ?></p></td>
 </tr>
 
-</table><hr><h3 class="title"><?php _e( 'Download Link', 'youtube-embed' ); ?></h3><table class="form-table">
+</table>
+
+<hr><h3 class="title"><?php _e( 'Download Link', 'youtube-embed' ); ?></h3>
+<p>Note: this feature has been disabled to comply with YouTube/Google's terms of service.
+<table class="form-table" style="opacity: .5">
 
 <!-- Download Link -->
 
 <tr>
 <th scope="row"><?php _e( 'Show Download Link', 'youtube-embed' ); ?></th>
-<td><label for="youtube_embed_download"><input type="checkbox" name="youtube_embed_download" value="1" <?php checked( $options['download'], '1' ); ?>/>
-<?php echo sprintf( __( 'Show a link to %s under the video', 'youtube-embed' ), '<a href="http://keepvid.com/" rel="nofollow">KeepVid</a>' ); ?></label></td>
+<td><label for="youtube_embed_download"><input type="checkbox" disabled name="youtube_embed_download" />
+<?php echo sprintf( __( 'Show a link to %s under the video', 'youtube-embed' ), 'KeepVid' ); ?></label></td>
 </tr>
 
 <!-- Download Text -->
 
 <tr>
 <th scope="row"><?php _e( 'Download Text', 'youtube-embed' ); ?></th>
-<td><label for="youtube_embed_download_txt"><input type="text" name="youtube_embed_download_text" class="large-text" value="<?php echo esc_attr( $options['download_text'] ); ?>"/>
+<td><label for="youtube_embed_download_txt"><input type="text" disabled name="youtube_embed_download_text" class="large-text" />
 <p class="description"><?php _e( 'Text or HTML to display to prompt download.', 'youtube-embed' ); ?></p></label></td>
 </tr>
 
@@ -801,7 +800,7 @@ if ( 'white' == $options['color'] ) {
 
 <tr>
 <th scope="row"><?php _e( 'Download Style', 'youtube-embed' ); ?></th>
-<td><label for="youtube_embed_download_style"><input type="text" name="youtube_embed_download_style" class="large-text code" value="<?php echo esc_attr( $options['download_style'] ); ?>"/>
+<td><label for="youtube_embed_download_style"><input type="text" disabled name="youtube_embed_download_style" class="large-text code" />
 <p class="description"><?php _e( 'CSS elements to apply to video download link.', 'youtube-embed' ); ?></p></label></td>
 </tr>
 

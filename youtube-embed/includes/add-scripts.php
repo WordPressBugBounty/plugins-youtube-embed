@@ -70,7 +70,7 @@ add_action( 'admin_print_styles', 'ye_admin_css' );
 /**
  * Add option to Admin Bar
  *
- * Add link to YouTube Embed profile options to Admin Bar.
+ * Add link to Embeds for YouTube profile options to Admin Bar.
  * With help from http://technerdia.com/1140_wordpress-admin-bar.html
  *
  * @param string $meta                   Meta.
@@ -99,7 +99,7 @@ function ye_admin_bar_render( $meta = true ) {
 			$wp_admin_bar->add_menu(
 				array(
 					'id'    => 'aye-menu',
-					'title' => __( 'YouTube Embed', 'youtube-embed' ),
+					'title' => __( 'Embeds for YouTube', 'youtube-embed' ),
 				)
 			);
 

@@ -1,18 +1,18 @@
 <?php
 /**
- * YouTube Embed
+ * Embeds for YouTube
  *
  * @package           youtube-embed
- * @author            YouTube Embed
+ * @author            Embeds for YouTube Team
  * @license           GPL-2.0-or-later
  *
- * Plugin Name:       YouTube Embed
+ * Plugin Name:       Embeds for YouTube
  * Plugin URI:        https://wordpress.org/plugins/youtube-embed/
  * Description:       🎥 An incredibly fast, simple, yet powerful, method of embedding YouTube videos into your WordPress site.
- * Version:           5.3.1
+ * Version:           5.4
  * Requires at least: 4.6
  * Requires PHP:      7.4
- * Author:            YouTube Embed
+ * Author:            Embeds for YouTube Team
  * Author URI:        https://wordpress.org/support/users/squared/
  * Text Domain:       youtube-embed
  * License:           GPL v2 or later
@@ -26,7 +26,7 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-define( 'YOUTUBE_EMBED_VERSION', '5.3.1' );
+define( 'YOUTUBE_EMBED_VERSION', '5.4' );
 
 $functions_dir = plugin_dir_path( __FILE__ ) . 'includes/';
 
@@ -36,7 +36,7 @@ require_once $functions_dir . 'shared-functions.php';       // Shared routines.
 
 require_once $functions_dir . 'add-scripts.php';            // Add various scripts.
 
-require_once $functions_dir . 'generate-embed-code.php';    // Generate YouTube embed code.
+require_once $functions_dir . 'generate-embed-code.php';    // Generate embed code.
 
 require_once $functions_dir . 'generate-other-code.php';    // Generate download & short URLs & thumbnails.
 

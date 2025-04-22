@@ -76,13 +76,13 @@ function ye_menu_initialise() {
 
 	$menu_icon = 'dashicons-video-alt3';
 
-	add_menu_page( __( 'About YouTube Embed', 'youtube-embed' ), __( 'YouTube Embed', 'youtube-embed' ), $menu_access, 'ye-profile-options', 'ye_profile_options', $menu_icon, 12 );
+	add_menu_page( __( 'About Embeds for YouTube', 'youtube-embed' ), __( 'Embeds for YouTube', 'youtube-embed' ), $menu_access, 'ye-profile-options', 'ye_profile_options', $menu_icon, 12 );
 
 	// Add profiles sub-menu.
 
 	global $ye_profiles_hook;
 
-	$ye_profiles_hook = add_submenu_page( 'ye-profile-options', __( 'YouTube Embed Profiles', 'youtube-embed' ), __( 'Profiles', 'youtube-embed' ), $menu_access, 'ye-profile-options', 'ye_profile_options' );
+	$ye_profiles_hook = add_submenu_page( 'ye-profile-options', __( 'Embeds for YouTube Profiles', 'youtube-embed' ), __( 'Profiles', 'youtube-embed' ), $menu_access, 'ye-profile-options', 'ye_profile_options' );
 
 	add_action( 'load-' . $ye_profiles_hook, 'ye_add_profiles_help' );
 
@@ -90,7 +90,7 @@ function ye_menu_initialise() {
 
 	global $ye_lists_hook;
 
-	$ye_lists_hook = add_submenu_page( 'ye-profile-options', __( 'YouTube Embed Lists', 'youtube-embed' ), __( 'Lists', 'youtube-embed' ), $menu_access, 'ye-list-options', 'ye_list_options' );
+	$ye_lists_hook = add_submenu_page( 'ye-profile-options', __( 'Embeds for YouTube Lists', 'youtube-embed' ), __( 'Lists', 'youtube-embed' ), $menu_access, 'ye-list-options', 'ye_list_options' );
 
 	add_action( 'load-' . $ye_lists_hook, 'ye_add_lists_help' );
 
@@ -113,7 +113,7 @@ function ye_menu_initialise() {
 
 	global $ye_options_hook;
 
-	$ye_options_hook = add_submenu_page( 'options-general.php', __( 'YouTube Embed Settings', 'youtube-embed' ), __( 'YouTube Embed', 'youtube-embed' ), $menu_access, 'ye-general-options', 'ye_general_options' );
+	$ye_options_hook = add_submenu_page( 'options-general.php', __( 'Embeds for YouTube Settings', 'youtube-embed' ), __( 'Embeds for YouTube', 'youtube-embed' ), $menu_access, 'ye-general-options', 'ye_general_options' );
 
 	add_action( 'load-' . $ye_options_hook, 'ye_add_options_help' );	
 }
@@ -267,7 +267,7 @@ function youtube_embed_help( $screen, $tab = 'help' ) {
 
 	if ( 'options' == $screen && 'help' == $tab ) {
 
-		$text .= '<p>' . __( 'This screen allows you to select non-specific options for the YouTube Embed plugin. For the default embedding settings, please select the <a href="admin.php?page=ye-profile-options">Profiles</a> administration option.', 'youtube-embed' ) . '</p>';
+		$text .= '<p>' . __( 'This screen allows you to select non-specific options for the Embeds for YouTube plugin. For the default embedding settings, please select the <a href="admin.php?page=ye-profile-options">Profiles</a> administration option.', 'youtube-embed' ) . '</p>';
 	}
 
 	if ( 'profiles' == $screen && 'help' == $tab ) {
@@ -285,7 +285,7 @@ function youtube_embed_help( $screen, $tab = 'help' ) {
 	if ( 'links' == $tab ) {
 
 		$text .= '<p><strong>' . __( 'For more information:', 'youtube-embed' ) . '</strong></p>';
-		$text .= '<p><a href="https://wordpress.org/plugins/youtube-embed/">' . __( 'YouTube Embed Plugin Documentation', 'youtube-embed' ) . '</a></p>';
+		$text .= '<p><a href="https://wordpress.org/plugins/youtube-embed/">' . __( 'Embeds for YouTube Plugin Documentation', 'youtube-embed' ) . '</a></p>';
 
 		if ( 'lists' != $screen ) {
 			$text .= '<p><a href="https://code.google.com/apis/youtube/player_parameters.html">' . __( 'YouTube Player Documentation', 'youtube-embed' ) . '</a></p>';
@@ -332,7 +332,7 @@ function youtube_embed_admin_messages() {
 				$message = __( $alternative . ', possibly the <a href="admin.php?page=jetpack_modules&activated=true">Shortcode Embeds module</a> in Jetpack' );
 			}
 
-			echo '<div class="error notice"><p>YouTube Embed: ' . $message . '.</p></div>';
+			echo '<div class="error notice"><p>Embeds for YouTube: ' . $message . '.</p></div>';
 		}
 	}
 

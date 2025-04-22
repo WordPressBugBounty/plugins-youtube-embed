@@ -10,7 +10,7 @@
 /**
  * Generate embed code
  *
- * Generate XHTML compatible YouTube embed code
+ * Generate XHTML compatible embed code
  *
  * @uses   ye_add_links             Add links under video.
  * @uses   ye_error                 Display an error.
@@ -125,9 +125,9 @@ function ye_generate_youtube_code( $array ) {
 			// If the video is invalid, output an error.
 
 			if ( ! $api_data['valid'] ) {
-				$result = $newline . '<!-- YouTube Embed v' . YOUTUBE_EMBED_VERSION . ' -->' . $newline;
+				$result = $newline . '<!-- Embeds for YouTube v' . YOUTUBE_EMBED_VERSION . ' -->' . $newline;
 				/* translators: %s is replaced with the ID of the YouTube video */
-				$result .= sprintf( __( 'The YouTube ID of %s is invalid.', 'youtube-embed' ), $id ) . $newline . '<!-- ' . __( 'End of YouTube Embed code' ) . ' -->' . $newline;
+				$result .= sprintf( __( 'The YouTube ID of %s is invalid.', 'youtube-embed' ), $id ) . $newline . '<!-- ' . __( 'End of Embeds for YouTube code' ) . ' -->' . $newline;
 				return $result;
 			}
 		}
@@ -546,12 +546,6 @@ function ye_generate_youtube_code( $array ) {
 		$end_tag .= '</div>' . $newline;
 	}
 	$result = str_replace( '%video%', $result . $end_tag, $template );
-
-	// Add the download link, if required.
-
-	if ( ( 1 == $options['download'] ) && ( 'v' == $embed_type ) ) {
-		$result .= '<div style="' . $options['download_style'] . '" class="aye_download">' . $newline . $tab . '<a href="' . ye_generate_download_code( $id ) . '">' . $options['download_text'] . '</a>' . $newline . '</div>' . $newline;
-	}
 
 	$result = $newline . $result;
 

@@ -16,7 +16,7 @@
  *
  * @param  string $paras        Shortcode parameters.
  * @param  string $content      Shortcode content.
- * @return string               YouTube embed code.
+ * @return string               embed code.
  */
 function ye_video_shortcode_default( $paras = '', $content = '' ) {
 
@@ -35,7 +35,7 @@ add_shortcode( 'youtube', 'ye_video_shortcode_default' );
  *
  * @param  string $paras       Shortcode parameters.
  * @param  string $content     Shortcode content.
- * @return string              YouTube embed code.
+ * @return string              Embeds for YouTube code.
  */
 function ye_video_shortcode_alt( $paras = '', $content = '' ) {
 
@@ -63,7 +63,7 @@ if ( isset( $shortcode ) && '' != $shortcode ) {
  * @param  string $content                 Shortcode content.
  * @param  string $callback                REDUNDANT.
  * @param  string $alt_shortcode           The number of the alternative shortcode used.
- * @return string                          YouTube embed code.
+ * @return string                          embed code.
  */
 function ye_video_shortcode( $paras = '', $content = '', $callback = '', $alt_shortcode = false ) {
 
@@ -319,35 +319,7 @@ add_shortcode( 'youtube_url', 'ye_shorturl_sc' );
  * @return string                      YouTube download link.
  */
 function ye_video_download( $paras = '', $content = '' ) {
-
-	extract( shortcode_atts( array( 'id' => '' ), $paras ) );
-
-	if ( '' == $id ) {
-		return do_shortcode( ye_error( __( 'No YouTube ID was found.', 'youtube-embed' ) ) );
-	}
-
-	// Extract the ID if a full URL has been specified.
-
-	$id = ye_extract_id( $id );
-
-	// Extract the API data.
-
-	$data = ye_get_api_data( $id );
-
-	if ( 'v' != $data['type'] || ! $data['valid'] ) {
-
-		// translators: %s: the YouTube video ID.
-		return do_shortcode( ye_error( sprintf( __( 'The YouTube ID of %s is invalid.', 'youtube-embed' ), $id ) ) );
-
-	}
-
-	// Get the download code.
-
-	$link = ye_generate_download_code( $id );
-
-	// Now return the HTML.
-
-	return do_shortcode( $link );
+	return '';	
 }
 
 add_shortcode( 'download_video', 'ye_video_download' );

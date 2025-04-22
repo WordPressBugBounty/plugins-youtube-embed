@@ -9,7 +9,7 @@
 
 ?>
 <div class="wrap">
-<h1><?php _e( 'YouTube Embed Settings', 'youtube-embed' ); ?></h1>
+<h1><?php _e( 'Embeds for YouTube Settings', 'youtube-embed' ); ?></h1>
 
 <?php
 
@@ -46,7 +46,6 @@ if ( ( ! empty( $_POST ) ) && ( check_admin_referer( 'youtube-embed-general', 'y
 	$options['script']         = sanitize_text_field( $_POST['youtube_embed_script'] );
 	$options['standard_video'] = sanitize_text_field( $_POST['youtube_embed_video'] );
 	$options['playlist_video'] = sanitize_text_field( $_POST['youtube_embed_playlist'] );
-	$options['lazyload']       = sanitize_text_field( $_POST['youtube_embed_lazyload'] );	
 
 	$options['api_cache'] = sanitize_text_field( $_POST['youtube_embed_api_cache'] );
 	if ( ! is_numeric( $options['api_cache'] ) ) {
@@ -137,7 +136,7 @@ $options   = ye_get_general_defaults();
 $shortcode = ye_get_shortcode();
 ?>
 
-<p><?php _e( 'These are the general settings for YouTube Embed. Please select <a href="admin.php?page=ye-profile-options">Profiles</a> for default embedding settings.', 'youtube-embed' ); ?></p>
+<p><?php _e( 'These are the general settings for Embeds for YouTube. Please select <a href="admin.php?page=ye-profile-options">Profiles</a> for default embedding settings.', 'youtube-embed' ); ?></p>
 
 <div class="notice notice-info"><p style="font-weight: bold">NOTE: This plugin supports the ability to insert the standard YouTube embed and playlist players. However, if you need to embed a YouTube facade, livestream, or gallery, we recommend the <a href="https://www.embedplus.com/">EmbedPlus.com</a> plugin that's freely available <a href="https://wordpress.org/plugins/youtube-embed-plus/">here</a>. It's been around for many years and is highly trusted.</p></div>
 

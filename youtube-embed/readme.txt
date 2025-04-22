@@ -1,10 +1,10 @@
-=== YouTube Embed ===
+=== Embeds for YouTube ===
 Contributors: dartiss, squared
 Tags: embed, insert, video, youtube
 Requires at least: 4.6
-Tested up to: 6.4
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 5.3.1
+Stable tag: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,9 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-YouTube Embed is an incredibly fast, simple, yet powerful, method of embedding YouTube videos into your WordPress site.
+**NOTE: This plugin supports the ability to insert the standard Embeds for YouTube and playlist players. However, if you need to embed a YouTube facade, livestream, or gallery, we recommend the [EmbedPlus.com](https://www.embedplus.com/) plugin that's freely available [here](https://wordpress.org/plugins/youtube-embed-plus/).  It's been around for many years and is highly trusted.**
 
-**NOTE: This plugin supports the ability to insert the standard YouTube embed and playlist players. However, if you need to embed a YouTube facade, livestream, or gallery, we recommend the [EmbedPlus.com](https://www.embedplus.com/) plugin that's freely available [here](https://wordpress.org/plugins/youtube-embed-plus/).  It's been around for many years and is highly trusted.**
+Embeds for YouTube is an incredibly fast, simple, yet powerful, method of embedding YouTube videos into your WordPress site.
 
 Key features include...
 
@@ -25,7 +25,7 @@ Key features include...
 * Housekept caching keeps the code generation nimble and your database tables slimline
 * Google compatible metadata is added to the video output based on data provided by the YouTube API - great for SEO!
 * Support for Do Not Track
-* Compatible with [Video SEO for WordPress](http://yoast.com/wordpress/video-seo/ "Video SEO for WordPress"), [a3 lazy load](https://wordpress.org/plugins/a3-lazy-load/ "a3 lazy load") and [WordPress Video Overlay Ads](https://wordpress.org/plugins/video-overlay-ads/ "WordPress Video Overlay Ads") and many more. In the case of Video SEO and WordPress Video Overlay Ads, their options will even appear under the YouTube Embed menu for total simplicity!
+* Compatible with [Video SEO for WordPress](http://yoast.com/wordpress/video-seo/ "Video SEO for WordPress"), [a3 lazy load](https://wordpress.org/plugins/a3-lazy-load/ "a3 lazy load") and [WordPress Video Overlay Ads](https://wordpress.org/plugins/video-overlay-ads/ "WordPress Video Overlay Ads") and many more. In the case of Video SEO and WordPress Video Overlay Ads, their options will even appear under the Embeds for YouTube menu for total simplicity!
 * Use [Turn Off The Lights](https://www.turnoffthelights.com/ "Turn Off The Lights")? This plugin works with it beautifully.
 * [iFrame Resizer](https://github.com/davidjbradshaw/iframe-resizer "iFrame Resizer") and [FitVids.js](https://github.com/davatron5000/FitVids.js "FitVids.js") supported to improve content resizing
 * Works "out of the box" with 4K, 60FPS and Chromecast - stream your embedded videos to your TV!
@@ -43,13 +43,13 @@ To add a video to a post or page simply use the shortcode `[[youtube]video[/yout
 
 If you're not sure what the video ID is, please head to the FAQ section where it's explained in greater detail!
 
-Within the administration area, click on the Settings menu option and then YouTube Embed to view and edit the generic settings for the plugin. Also under the YouTube Embed menu (see screenshot 1) you can click on the Profiles sub-menu to set the default options which define the output of your videos. Any videos you display (unless overridden by parameters - more on that later) will use the settings from the Profiles screen.
+Within the administration area, click on the Settings menu option and then Embeds for YouTube to view and edit the generic settings for the plugin. Also under the Embeds for YouTube menu (see screenshot 1) you can click on the Profiles sub-menu to set the default options which define the output of your videos. Any videos you display (unless overridden by parameters - more on that later) will use the settings from the Profiles screen.
 
 Although this document contains a lot of information more is provided on the various administration pages. Whilst on the administration pages, click on the "Help" button in the top right for some useful tips and links. If anything isn't covered and you're unsure of what it does please ask [on the forum](https://wordpress.org/support/plugin/youtube-embed "WordPress Plugins Forum").
 
 == 🔑 Creating an API Key ==
 
-At the top of the `YouTube Embed Settings` administration screen is an option to specify an API key. This is optional but many of the features of this plugin - including accurate video information being added to the metadata - will not be available without it. Thankfully an API key is easy to get and is free.
+At the top of the `Embeds for YouTube Settings` administration screen is an option to specify an API key. This is optional but many of the features of this plugin - including accurate video information being added to the metadata - will not be available without it. Thankfully an API key is easy to get and is free.
 
 1. Head to the [YouTube Developers Console](https://console.developers.google.com/cloud-resource-manager "Developers Console")
 2. Click on CREATE PROJECT
@@ -99,7 +99,7 @@ Which options are available depends upon the users's set-up (for example, whethe
 
 == Alternative Shortcodes ==
 
-Within Administration, selecting Settings -> YouTube Embed will provide a list of generic options. One option is named `Alternative Shortcode` and allows you to specify another shortcode that will work exactly the same as the standard shortcode of `[[youtube]]`.
+Within Administration, selecting Settings -> Embeds for YouTube will provide a list of generic options. One option is named `Alternative Shortcode` and allows you to specify another shortcode that will work exactly the same as the standard shortcode of `[[youtube]]`.
 
 There are 2 reasons why you might want to do this...
 
@@ -110,7 +110,7 @@ The new shortcode can also have its own default profile assigned to it (see the 
 
 == Widgets ==
 
-Widgets can be easily added. In Administration simply click on the Widgets option under the Appearance menu. YouTube Embed will be one of the listed widgets. Drag it to the appropriate sidebar on the right hand side and then choose your video options - any that aren't specified are taken from your supplied profile. It's best to have a profile set-up specifically for widgets!
+Widgets can be easily added. In Administration simply click on the Widgets option under the Appearance menu. Embeds for YouTube will be one of the listed widgets. Drag it to the appropriate sidebar on the right hand side and then choose your video options - any that aren't specified are taken from your supplied profile. It's best to have a profile set-up specifically for widgets!
 
 If you wish to display an automatically generated playlist based on user name, simply change the "ID Type" appropriately and then specify the name where the video ID would normally be entered.
 
@@ -136,7 +136,7 @@ For reasons of security, only specific HTML tags are valid - these are a, br, di
 
 == Profiles ==
 
-You've probably already had a look at the default profile, accessible by selecting Profiles from the YouTube Embed Administration menu option. Here you can specify the default option which will apply to any embedded video.
+You've probably already had a look at the default profile, accessible by selecting Profiles from the Embeds for YouTube Administration menu option. Here you can specify the default option which will apply to any embedded video.
 
 However, in the top right hand corner is a drop-down box and a button marked Change profile. Simply select an alternative profile and click the button and you can then edit the options for this alternative profile. You can even name it as well.
 
@@ -144,11 +144,11 @@ To use this profile, simply use the parameter `profile=` followed by the profile
 
 This could be useful, for instance, for having a separate profile for different parts of your site - posts, sidebar, etc - or for different video types (e.g. widescreen).
 
-By default you have 5 extra profiles - if you wish to have more (or less) this number can be changed from the YouTube Embed settings screen.
+By default you have 5 extra profiles - if you wish to have more (or less) this number can be changed from the Embeds for YouTube settings screen.
 
 == 📝 Lists ==
 
-Although this plugin will play standard YouTube playlists their playback options are limited. Instead you can create your own video lists. Under the YouTube Embed administration menu is a sub-menu named Lists. Select this and you will be shown a screen where you can type in a list of video IDs (or URLS). You can also provide a name for the list.
+Although this plugin will play standard YouTube playlists their playback options are limited. Instead you can create your own video lists. Under the Embeds for YouTube administration menu is a sub-menu named Lists. Select this and you will be shown a screen where you can type in a list of video IDs (or URLS). You can also provide a name for the list.
 
 When saving the list each video is validated.
 
@@ -170,13 +170,13 @@ To use, simply use the `user` parameter to switch the appropriate option on. The
 
 == 📏 Third Party Resizing Scripts ==
 
-Within the YouTube Embed settings screen there is an option to set a third party resizing script - either [iFrame Resizer](https://github.com/davidjbradshaw/iframe-resizer "iFrame Resizer") or [FitVids.js](https://github.com/davatron5000/FitVids.js "FitVids.js"). These work alongside the existing IFRAME but try and improve the output, particularly with regard to how the output is sized.
+Within the Embeds for YouTube settings screen there is an option to set a third party resizing script - either [iFrame Resizer](https://github.com/davidjbradshaw/iframe-resizer "iFrame Resizer") or [FitVids.js](https://github.com/davatron5000/FitVids.js "FitVids.js"). These work alongside the existing IFRAME but try and improve the output, particularly with regard to how the output is sized.
 
 There are no guarantees with these and no support of their specific functionality is provided. However, if the video output is wrong then it's worth trying these.
 
 == 🏙 Thumbnails ==
 
-YouTube Embed also has the ability to return a thumbnail of a video (sorry, this doesn't work with playlists).
+Embeds for YouTube also has the ability to return a thumbnail of a video (sorry, this doesn't work with playlists).
 
 To use the shortcode method, insert `[youtube_thumb]id[/youtube_thumb]` into a post or page to create a thumbnail of the relevant video ID which, once clicked, will open up the appropriate YouTube page.
 
@@ -199,18 +199,6 @@ This overrides the `TARGET` and `ALT` elements of the thumbnail.
 
 You may return a short URL for any YouTube video by simply inserting `[youtube_url id=xx]` anywhere within a post. `xx` is the ID of the video.
 
-== ⬇️ Downloading Videos ==
-
-If you wish your users to be able to download a YouTube video or playlist then you can do this automatically.
-
-In the Profiles screen within administration there is an option to automatically show a download link. You can specify some text or HTML to display as well as CSS. If you'd prefer to do this manually then you can use the shortcode `download_video`. The content to link is specified between the open and close shortcode tags and there are 3 parameters...
-
-* **id** - The ID of the video or playlist. This is required.
-* **target** - The target of the link (e.g. `_blank`). This is optional.
-* **nofollow** - yes or no, use this to specify whether a `nofollow` tag should be added to the link. This is optional and by default it will be included.
-
-e.g. `[download_video id="Z_sCoHGIpU0" target="_blank"]Download the video[/download_video]`
-
 == ℹ️ Video Information ==
 
 The shortcode of `vinfo` can be used to output useful video information. Simple pass the video ID using the parameter of `id` and then add any text between the opening and closing shortcode. If this text contains any of the following tags then they will be replaced with the relevant video information...
@@ -219,7 +207,6 @@ The shortcode of `vinfo` can be used to output useful video information. Simple 
 * %description% - the video description
 * %url% - a link to the video on YouTube
 * %shorturl% - a shorturl of the video
-* %download% - a link to a site where the video can be downloaded
 * %thumb_default% - URL of a thumbnail image 120x90 pixels in size
 * %thumb_medium% - URL of a thumbnail image 320x180 pixels in size
 * %thumb_high% - URL of a thumbnail image 480x360 pixels in size
@@ -234,7 +221,7 @@ This would display a 120x90 pixel thumbnail with a clickable link to the origina
 
 == Other Settings ==
 
-Under the Settings menu s a sub-menu named YouTube Embed. Select this and find the section named Embedding. There are 2 options here that have not been covered already...
+Under the Settings menu s a sub-menu named Embeds for YouTube. Select this and find the section named Embedding. There are 2 options here that have not been covered already...
 
 1. Add Metadata - by default, RDFa metadata is added to video output. This can be switched on or off as required (see the FAQs for more information about metadata usage).
 2. Feed - videos will not appear in feeds so use this option to decide whether you want them to be converted to links and/or thumbnails.
@@ -248,7 +235,7 @@ Under the Settings menu s a sub-menu named YouTube Embed. Select this and find t
 
 == Installation ==
 
-YouTube Embed can be found and installed via the Plugin menu within WordPress administration (Plugins -> Add New). Alternatively, it can be downloaded from WordPress.org and installed manually...
+Embeds for YouTube can be found and installed via the Plugin menu within WordPress administration (Plugins -> Add New). Alternatively, it can be downloaded from WordPress.org and installed manually...
 
 1. Upload the entire `youtube-embed` folder to your `wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress administration.
@@ -275,10 +262,10 @@ If you go into the Profile screen in Administration there is a "Window Mode" opt
 
 = I'm getting an error saying that "an alternative plugin is using the [[youtube]] shortcode"  =
 
-As this suggests another plugin that you have installed is using the same shortcode as YouTube Embed. That means that use of the `youtube` shortcode won't work. You have 2 possible actions to take...
+As this suggests another plugin that you have installed is using the same shortcode as Embeds for YouTube. That means that use of the `youtube` shortcode won't work. You have 2 possible actions to take...
 
 1. Disable the conflicting plugin. If it's Jetpack then you can disable the Shortcode Embeds module.
-2. Leave it as it is and use the option to use a second shortcode with this plugin. Head to the YouTube Embed settings screen and you can set up a secondary shortcode. You can also switch off the nag message too from here.
+2. Leave it as it is and use the option to use a second shortcode with this plugin. Head to the Embeds for YouTube settings screen and you can set up a secondary shortcode. You can also switch off the nag message too from here.
 
 = The "autostart" feature is not working in iOS =
 
@@ -294,11 +281,11 @@ This is usually due to using a different ratio than the video was designed for. 
 
 = The controls under the video don't display properly when using Firefox =
 
-This is a bug in Firefox. Short term, switch on SSL in the Profiles screen and it will work. Longer term, I've [raised a bug report with Mozilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1223515 "Bug 1223515 - Broken images in YouTube embedded player when not using SSL").
+This is a bug in Firefox. Short term, switch on SSL in the Profiles screen and it will work. Longer term, I've [raised a bug report with Mozilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1223515 "Bug 1223515 - Broken images in Embeds for YouTubeded player when not using SSL").
 
 = The generated code does not cleanly validate =
 
-No, by default it doesn't but it works absolutely fine as it. However, if you really must cleanly validate against HTML5 or transitional XHTML then head into the YouTube Embed settings screen and you'll find an option to "Improve Validation". Tick this and Save and it should validate.... UNLESS you have the metadata option switched on, in which case it won't validate still. Switch that off though and you're 100%.
+No, by default it doesn't but it works absolutely fine as it. However, if you really must cleanly validate against HTML5 or transitional XHTML then head into the Embeds for YouTube settings screen and you'll find an option to "Improve Validation". Tick this and Save and it should validate.... UNLESS you have the metadata option switched on, in which case it won't validate still. Switch that off though and you're 100%.
 
 One thing to note - by switching on "Improve Validation" you'll extend the length of the URL line that's passed to YouTube. Please see the next FAQ to understand this better.
 
@@ -314,17 +301,22 @@ Before reporting it please bear in mind that this plugin uses the standard YouTu
 
 == Screenshots ==
 
-1. YouTube Embed in the administration menu
+1. Embeds for YouTube in the administration menu
 2. The main options screen
 3. The profiles screen
 4. The lists screen - videos have been added and validated. The drop-down help is also shown
 5. The default widget options
-6. The default visual editor options with the YouTube Embed button
+6. The default visual editor options with the Embeds for YouTube button
 7. The third party plugins menu
 
 == Changelog ==
 
 I use semantic versioning, with the first release being 1.0.
+
+= 5.4 =
+* Maintenance: Rename plugin to comply with WordPress.org plugin guidelines. [More info here](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/#17-plugins-must-respect-trademarks-copyrights-and-project-names).
+* Maintenance: Tested up to WordPress 6.8.
+* Bug: Removed broken and insecure download YouTube feature; removal also complies with Google's terms of service.
 
 = 5.3.1 =
 * Maintenance: Update made to plugin meta
@@ -353,7 +345,7 @@ I use semantic versioning, with the first release being 1.0.
 * Enhancement: What have I been doing during the pandemic? Picking through this code and resolving coding standards. Sigh. There's a LOT. Not all are done but will be in future updates but, for now, the majority are. Based on the amount of code I've had to change, I'm worried I've broken something. But, you know, every day's a school day and this has taught me a LOT
 * Enhancement: Look, I know I keep moving it but the plugin settings really shouldn't be anywhere other than under the Settings menu. So I've moved it back there
 * Enhancement: Added native lazy loading to the videos. I'll maybe look to add it to the thumbnails at a later time - does anybody want that?
-* Enhancement: I've improved the cache key generation. But, what this does mean, is that updating will cause all your YouTube Embed caches to clear. All your cache are belong to us 
+* Enhancement: I've improved the cache key generation. But, what this does mean, is that updating will cause all your Embeds for YouTube caches to clear. All your cache are belong to us 
 * Enhancement: Clarified the API sign-up process in the README
 
 = 5.1.1 =
@@ -444,8 +436,8 @@ I use semantic versioning, with the first release being 1.0.
 * Bug: Had removed a function (by accident, you understand) that converted the old alternative shortcode settings to a new format. The result is that the conversion didn't take place and an array was passed as a shortcode name to WordPress Core, generating an error. The function has been added back in
 
 = 4.3 =
-* Enhancement: Added new "Third Party Plugins" screen, which lists third party plugins that work alongside YouTube Embed, adding extra functionality. You can view, install and see the status of these plugins from this screen
-* Maintenance: Moved the settings back to the YouTube Embed menu
+* Enhancement: Added new "Third Party Plugins" screen, which lists third party plugins that work alongside Embeds for YouTube, adding extra functionality. You can view, install and see the status of these plugins from this screen
+* Maintenance: Moved the settings back to the Embeds for YouTube menu
 * Maintenance: Renamed menus to be more specific
 * Maintenance: Updated the function names, which were still using the out-dated "vye" prefix
 
@@ -458,7 +450,7 @@ I use semantic versioning, with the first release being 1.0.
 * Enhancement: Reviewed and reduced the calls to fetch the options
 * Enhancement: Added a new general option to allow you to force a list type to be specified before a list can be used. The reason? By doing this the code doesn't have to check if the ID it a list name each time and it improves performance. For those upgrading this will be switched off by default to maintain backwards compatibility
 * Enhancement: Admin bar options only appear if viewing the admin bar on the site (showing it whilst in the admin screens seemed rather pointless)
-* Enhancement: If you use [WordPress Video Overlay Ads](https://wordpress.org/plugins/video-overlay-ads/ "WordPress Video Overlay Ads") or [Video SEO for WordPress](http://yoast.com/wordpress/video-seo/ "Video SEO for WordPress") then the settings menus will appear under the YouTube Embed menu
+* Enhancement: If you use [WordPress Video Overlay Ads](https://wordpress.org/plugins/video-overlay-ads/ "WordPress Video Overlay Ads") or [Video SEO for WordPress](http://yoast.com/wordpress/video-seo/ "Video SEO for WordPress") then the settings menus will appear under the Embeds for YouTube menu
 * Enhancement: SSL options removed as it's now used by default, including with thumbnails and schema.org links
 * Enhancement: Improved the RSS feed output for search or user upload requests
 * Maintenance: Removed some deprecated elements in the code
@@ -584,5 +576,7 @@ I use semantic versioning, with the first release being 1.0.
 
 == Upgrade Notice ==
 
-= 5.3.1 =
-* Update plugin meta
+= 5.4 =
+* Removed broken and insecure download YouTube feature; removal also complies with Google's terms of service.
+* Renamed the plugin to comply with WordPress.org plugin guidelines.
+* Tested up to WordPress 6.8.

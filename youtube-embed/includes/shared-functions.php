@@ -94,7 +94,7 @@ function ye_extract_id( $id ) {
  */
 function ye_error( $errorin ) {
 
-	return '<p style="color: #f00; font-weight: bold;">YouTube Embed: ' . $errorin . "</p>\n";
+	return '<p style="color: #f00; font-weight: bold;">Embeds for YouTube: ' . $errorin . "</p>\n";
 
 }
 
@@ -431,7 +431,7 @@ function ye_set_profile_defaults( $profile ) {
 		'fixed'          => '',
 		'download'       => '',
 		'download_style' => '',
-		'download_text'  => 'Click here to download the video',
+		'download_text'  => '',
 		'playsinline'    => '',
 		'language'       => '',
 	);

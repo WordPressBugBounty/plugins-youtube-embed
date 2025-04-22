@@ -24,7 +24,7 @@ class YouTubeEmbedWidget extends WP_Widget {
 
 		parent::__construct(
 			'youtube_embed_widget',
-			__( 'YouTube Embed', 'youtube-embed' ),
+			__( 'Embeds for YouTube', 'youtube-embed' ),
 			array(
 				'description'                 => __( 'Embed YouTube Widget.', 'youtube-embed' ),
 				'class'                       => 'ye-widget',

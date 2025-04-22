@@ -159,7 +159,7 @@ function ye_generate_vinfo_code( $id, $text ) {
 	$output = str_replace( '%description%', $data['description'], $output );
 	$output = str_replace( '%url%', 'https://www.youtube.com/watch?v=' . $id, $output );
 	$output = str_replace( '%shorturl%', 'https://youtu.be/' . $id, $output );
-	$output = str_replace( '%download%', 'http://keepvid.com/?url=https://www.youtube.com/watch?v=' . $id, $output );
+	$output = str_replace( '%download%', '', $output );
 
 	$output = str_replace( '%thumb_default%', $data['thumb_default'], $output );
 	$output = str_replace( '%thumb_medium%', $data['thumb_medium'], $output );
